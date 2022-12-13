@@ -9,8 +9,8 @@ h2 {
   font-size: 40px;
   line-height: 50px;
   position: relative;
-  padding-bottom: 10px;
-  &:after{
+  padding-bottom: 15px;
+  &:after {
     content: "";
     width: 30px;
     height: 5px;
@@ -49,11 +49,19 @@ p {
     line-height: 24px;
   }
 }
-.button{
-  &.primary{
-    background: $main;
+.button {
+  &.primary {
+    background: $primary;
+    background-image: linear-gradient(140deg, #2072ff, #0451e5);
+    border: 1px solid  $gray3;
     font-size: 16px;
     line-height: 20px;
+    color: $gray2;
+    padding: 8px 20px;
+    span{
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 }
 
@@ -71,5 +79,20 @@ p {
   }
   100% {
     transform: translateY(0px) translate3d(0, 0px, 0);
+  }
+}
+
+.support {
+  &__text {
+    display: flex;
+    justify-content: center;
+    input {
+      font-size: 15px;
+      line-height: 15px;
+      padding: 8px 30px 8px 11px;  
+      color: $black2;
+      border: 1px solid $primary;
+      box-shadow: 0 0 0 0.125em rgb(4 81 229 / 25%);
+    }
   }
 }

@@ -52,3 +52,32 @@
   .footer {
   }
 }
+
+.info {
+  &__inner {
+    padding: 45px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-text {
+      width: calc(50% - 15px);
+      max-width: 684px;
+    }
+    &-support {
+      width: calc(50% - 15px);
+      max-width: 684px;
+      text-align: center;
+      .support{
+          margin-bottom: 5px;
+      }
+      p{
+        font-size: 14px;
+        line-height: 18px;
+    }
+    }
+  }
+  h2{
+      font-weight: 600;
+      margin-bottom: 24px;
+  }
+}
