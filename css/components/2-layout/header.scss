@@ -4,6 +4,7 @@
   left: 0;
   width: 100%;
   z-index: 10;
+  backdrop-filter: blur(10px);
   &.sticky  {
    position: fixed;
    top: 0;
@@ -15,16 +16,30 @@
   &__inner {
     padding: 30px 0;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     &-logo {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 320px;
-      img {
-        width: 100%;
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 3px;
+        width: 32px;
+        height: 32px;
+        img {
+          width: 100%;
+        }
       }
+      strong {
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 700;
+        color: $black2;
+      }
+   
     }
   }
 }

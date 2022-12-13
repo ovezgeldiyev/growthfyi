@@ -1,27 +1,31 @@
 @font-face {
-    font-family: 'West';
-    src: url('WestTrial-ExtraBoldWeb.woff2') format('woff2'),
-        url('WestTrial-ExtraBoldWeb.woff') format('woff');
-    font-weight: bold;
+    font-family: 'Arial';
+    src: url('./ARIBLK.TTF') format('woff2');
+    font-weight: 900;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'West';
-    src: url('WestTrial-LightWeb.woff2') format('woff2'),
-        url('WestTrial-LightWeb.woff') format('woff');
-    font-weight: 300;
+    font-family: 'Arial';
+    src: url('./ARIALBD\ 1.TTF') format('woff2');
+    font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'West';
-    src: url('WestTrial-MediumWeb.woff2') format('woff2'),
-        url('WestTrial-MediumWeb.woff') format('woff');
+    font-family: 'Arial';
+    src: url('./ArialMdm.ttf') format('woff2');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Arial';
+    src: url('./arial.ttf') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}

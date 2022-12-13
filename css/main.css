@@ -55,7 +55,7 @@ Global Settings
 ====================================================================
    ***/
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 21px;
   color: #4a4a4a;
   line-height: 40px;
@@ -91,7 +91,7 @@ h1 {
   line-height: 58px;
 }
 h1 span {
-  color: #5d83e5;
+  color: #4a4a4a;
 }
 
 h2 {
@@ -104,13 +104,13 @@ h2:after {
   content: "";
   width: 30px;
   height: 5px;
-  background: #5d83e5;
+  background: #4a4a4a;
   position: absolute;
   bottom: 0;
   left: 0;
 }
 h2 span {
-  color: #5d83e5;
+  color: #4a4a4a;
 }
 
 h3 {
@@ -118,7 +118,7 @@ h3 {
   line-height: 28px;
 }
 h3 span {
-  color: #5d83e5;
+  color: #4a4a4a;
 }
 
 h4 {
@@ -143,7 +143,7 @@ p.sm {
 }
 
 .button.primary {
-  background: #5d83e5;
+  background: #4a4a4a;
   font-size: 16px;
   line-height: 20px;
 }
@@ -183,6 +183,8 @@ p.sm {
   left: 0;
   width: 100%;
   z-index: 10;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 .header.sticky {
   position: fixed;
@@ -199,9 +201,6 @@ p.sm {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -218,8 +217,28 @@ p.sm {
           align-items: center;
   width: 320px;
 }
-.header__inner-logo img {
+.header__inner-logo span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 3px;
+  width: 32px;
+  height: 32px;
+}
+.header__inner-logo span img {
   width: 100%;
+}
+.header__inner-logo strong {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #363636;
 }
 
 @-webkit-keyframes sticky {
@@ -288,7 +307,6 @@ p.sm {
 }
 .footer__inner p {
   font-size: 14px;
-  color: #4a4a4a;
 }
 .footer__inner a {
   font-size: 14px;
