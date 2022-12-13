@@ -1,21 +1,60 @@
 // 1450px
 @include xxxxlg-xxxxxlg {
+    h2{
+        font-size: 35px;
+        line-height: 45px;
+      }
     // @include hero-xxxxlg-xxxxxlg;
 }
 // 1380px
 @include xxxlg-xxxxlg {
     @include hero-xxxlg-xxxxlg;
+  @include look-xxxlg-xxxxlg;
+
 }
 // 1250px
 @include xlg-xxlg-extra {
-    @include hero-xlg-xxlg-extra;
+    h2{
+        font-size: 33px;
+        line-height: 40px;
+      }
+      p{
+        &.sm{
+          font-size: 15px;
+          line-height: 22px
+        }
+      }
+      .support{
+        &__text{
+          input{
+            padding: 7px 25px 7px 11px;
+            font-size: 14px;
+            line-height: 14px
+          }
+          .button{
+            &.primary{
+              padding: 7px 18px;
+              font-size: 14px;
+              line-height: 14px
+    
+            }
+          }
+        }
+      }
+      @include hero-xlg-xxlg-extra;
+      @include look-xlg-xxlg-extra;
 }
 // 1180px
 @include xlg-xxlg {
     .auto__container {
         padding: 0 30px;
     }
-    @include hero-xlg-xxlg;
+    h2{
+        font-size: 29px;
+        line-height: 37px;
+      }
+      @include hero-xlg-xxlg;
+      @include info-xlg-xxlg;
 }
 // 1024px
 @include lg-xlg {
@@ -25,11 +64,13 @@
     @include nav-lg-xlg;
     @include header-lg-xlg;
     @include hero-lg-xlg;
-
+    @include footer-lg-xlg;
+    @include info-lg-xlg;
 }
 // 930px
 @include md-lg {
     @include hero-md-lg;
+    @include info-md-lg;
 }
 // 750px
 @include sm-md {
@@ -37,10 +78,14 @@
         padding: 0 20px;
     }
     @include hero-sm-md;
+  @include footer-sm-md;
+
 }
 // 650px
 @include sm-md-extra {
     @include hero-sm-md-extra;
+  @include footer-sm-md-extra;
+
 }
 // 540px
 @include xsm-sm  {
