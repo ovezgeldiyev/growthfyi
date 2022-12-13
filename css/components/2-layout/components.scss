@@ -1,36 +1,75 @@
 h1 {
-    font-weight: 700;
-    font-size: 70px;
-    line-height: 85px;
+  font-size: 48px;
+  line-height: 58px;
+  span {
+    color: $main;
+  }
 }
-
 h2 {
-
+  font-size: 40px;
+  line-height: 50px;
+  position: relative;
+  padding-bottom: 10px;
+  &:after{
+    content: "";
+    width: 30px;
+    height: 5px;
+    background: $primary;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  span {
+    color: $primary;
+  }
 }
-
 h3 {
-
+  font-size: 20px;
+  line-height: 28px;
+  span {
+    color: $main;
+  }
 }
-
 h4 {
-
+  font-size: 22px;
 }
-
 h5 {
-
+  font-size: 20px;
 }
-
 h6 {
-
+  font-size: 18px;
 }
 p {
+  &.big {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  &.sm {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.button{
+  &.primary{
+    background: $main;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
 
-}
-main {
-    overflow: hidden;
-}
-.button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+// animation-name: pulse;
+// animation-duration: 4s;
+// animation-fill-mode: both;
+// animation-iteration-count: infinite;
+@keyframes pulse {
+  0% {
+    transform: translateY(0px) translate3d(0, 0px, 0);
+  }
+
+  50% {
+    transform: translateY(-7.5px) translate3d(0, -7.5px, 0);
+  }
+  100% {
+    transform: translateY(0px) translate3d(0, 0px, 0);
+  }
 }
