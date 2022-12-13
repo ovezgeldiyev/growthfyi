@@ -104,13 +104,13 @@ h2:after {
   content: "";
   width: 30px;
   height: 5px;
-  background: #4a4a4a;
+  background: #0451e5;
   position: absolute;
   bottom: 0;
   left: 0;
 }
 h2 span {
-  color: #4a4a4a;
+  color: #0451e5;
 }
 
 h3 {
