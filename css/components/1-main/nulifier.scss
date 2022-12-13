@@ -49,10 +49,10 @@ Global Settings
 body {
   font-family: $inter;
   font-size: 21px;
-  color: $white;
+  color: $black2;
   line-height: 40px;
   font-weight: 400;
-  background: $black;
+  background: $white;
 }
 a {
   text-decoration: none;
@@ -71,7 +71,7 @@ ul {
 }
 .auto__container {
   position: relative;
-  max-width: 1250px;
+  max-width: 1536px;
   margin: 0 auto;
   padding: 0 40px;
 }
