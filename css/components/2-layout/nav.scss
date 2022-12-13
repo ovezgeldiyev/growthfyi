@@ -2,6 +2,89 @@
     &__inner {
         display: flex;
         align-items: center;
+        &-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            width: 120%;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            padding: 8px 0;
+            background-color: $white2;
+            box-shadow: 0 8px 8px rgb(10 10 10 / 10%);
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+            border-top: 2px solid #dbdbdb;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            a {
+                color: $main;
+                font-weight: 400;
+                transition: .3s ease;
+                background-color: transparent;
+                padding: 6px 16px;
+                &:hover {
+                    color: #0a0a0a;
+                    background-color: #f5f5f5;
+                }
+            }
+        }
+        li {
+            margin-right: 16px;
+            &.drop {
+                position: relative;
+                &:hover {
+                    .nav__inner-dropdown {
+                        max-height: 160px;
+                        opacity: 1;
+                    }
+                }
+                & > a {
+                    padding-right: 36px;
+                    position: relative;
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        top: 50%;
+                        right: 15px;
+                        width: 9px;
+                        height: 9px;
+                        border-top: 2.5px solid $primary;
+                        border-right: 2.5px solid $primary;
+                        background-color: transparent;
+                        transform: translateY(-50%) rotate(135deg);
+                    }
+                }
+            }
+
+            & > a {
+                color: $main;
+                font-weight: 400;
+                transition: .3s ease;
+                display: flex;
+                align-items: center;
+                padding: 8px;
+                &.active {
+                    color: $primary;
+                }
+                &:hover {
+                    color: $primary;
+                 
+                }
+                span {
+                    color: $primary;
+                    background-color: rgba($primary, 0.2);
+                    margin-left: 8px;
+                    font-size: 12px;
+                    line-height: 13px;
+                    padding: 6px 8px;
+                    border-radius: 4px;
+                }
+            }
+        }
     }
     .burger {
         display: none;
@@ -39,6 +122,7 @@
             height: 100%;
             overflow-y: auto;
             background: #FEFEFE;
+      
         }
     }
     .burger {
