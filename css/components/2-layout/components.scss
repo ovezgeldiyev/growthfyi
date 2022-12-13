@@ -58,9 +58,12 @@ p {
     line-height: 20px;
     color: $gray2;
     padding: 8px 20px;
+    display: flex;
+    align-items: center;
     span{
       font-size: 20px;
       line-height: 20px;
+      margin-left: 5px;
     }
   }
 }
