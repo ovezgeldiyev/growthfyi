@@ -72,7 +72,7 @@
                 }
                 &:hover {
                     color: $primary;
-                 
+                    opacity: 1;
                 }
                 span {
                     color: $primary;
@@ -82,6 +82,10 @@
                     line-height: 13px;
                     padding: 6px 8px;
                     border-radius: 4px;
+                    transition: .3s ease;
+                    &:hover {
+                        opacity: .8;
+                    }
                 }
             }
         }
@@ -90,39 +94,64 @@
         display: none;
     }
 }
+.burger {
+    display: none;
+}
 // 1024px
 @mixin nav-lg-xlg {
     body.active {
         overflow: hidden;
     }
     .nav {
-        position: fixed;
-        top: 60px;
+        position: absolute;
+        top: 100%;
         left: 0;
         width: 100%;
-        height: calc(100% - 60px);
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
         z-index: 9;
-        background: rgba($color: #000000, $alpha: 0.4);
-        transform: translateX(100%);
-        @include transition;
+        background: $white2;
+        transition: .4s ease;
+        box-shadow: 0 8px 16px rgb(10 10 10 / 10%);
         &.active {
-            @include transformReset;
+            max-height: 500px;
+            opacity: 1;
         }
         &__inner {
+            padding: 10px 0;
             flex-direction: column;
-            position: absolute;
             justify-content: unset;
-            align-items: center;
-            box-sizing: border-box;
-            top: 0;
-            right: 0;
+            align-items: flex-start;
             width: 100%;
-            z-index: 1;
-            padding: 50px 20px 20px 20px;
-            height: 100%;
-            overflow-y: auto;
-            background: #FEFEFE;
-      
+            &-dropdown {
+                position: static;
+                max-height: unset;
+                opacity: 1;
+                overflow: visible;
+                border-top: unset;
+                box-shadow: unset;
+                transform: translate(0);
+                width: 100%;
+                align-items: flex-start;
+                a {
+                    width: 100%;
+                    &:hover {
+                        background-color: transparent;
+                        color: $primary;
+                    }
+                }
+            }
+            li {
+                margin: 0;
+                width: 100%;
+                & > a {
+                    padding: 8px 12px;
+                }
+            }
+            .button {
+                margin: 6px 12px;
+            }
         }
     }
     .burger {
@@ -130,15 +159,16 @@
         cursor: pointer;
         @include transition;
         position: relative;
-        width: 30px;
-        height: 30px;
+        width: 52px;
+        height: 52px;
+        transition: .3s ease;
         &:hover {
-            opacity: .8;
+            background-color: rgba(0, 0, 0, .05);
         }
         &::before {
-            top: 20%;
-            width: 100%;
-            height: 3px;
+            top: 36%;
+            width: 16px;
+            height: 1px;
             background-color: $black;
             transition: all 0.3s ease;
             content: "";
@@ -148,8 +178,8 @@
         }
         span {
             top: 50%;
-            width: 100%;
-            height: 3px;
+            width: 16px;
+            height: 1px;
             background-color: $black;
             transition: all 0.3s ease;
             position: absolute;
@@ -158,9 +188,9 @@
             @include transition;
         }
         &::after {
-            bottom: 20%;
-            width: 100%;
-            height: 3px;
+            bottom: 36%;
+            width: 16px;
+            height: 1px;
             background-color: $black;
             transition: all 0.3s ease;
             content: "";
@@ -170,17 +200,14 @@
         }
         &.active {
             &::before {
-                top: 50%;
-                -webkit-transform: translate(-50%, -50%) rotate(45deg);
-                transform: translate(-50%, -50%) rotate(45deg);
+                transform: translate(-50%, 12px);
             }
             span {
                 opacity: 0;
             }
             &::after {
-                bottom: 50%;
-                -webkit-transform: translate(-50%, 50%) rotate(-45deg);
-                transform: translate(-50%, 50%) rotate(-45deg);
+                transform: translate(-50%, -12px);
+
             }
         }
     }

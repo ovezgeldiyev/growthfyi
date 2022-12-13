@@ -1,5 +1,46 @@
 .hero {
-    
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-content {
+            width: calc(50% - 12px);
+            max-width: 636px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &-image {
+            width: calc(50% - 12px);
+            max-width: 636px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 100%;
+                animation-name: pulse;
+                animation-duration: 4s;
+                animation-fill-mode: both;
+                animation-iteration-count: infinite;
+            }
+        }
+        .note {
+            margin-bottom: 16px;
+        }
+        .support {
+            margin-bottom: 6px;
+        }
+        h1 {
+            margin-bottom: 26px;
+        }
+        p {
+            margin-bottom: 24px;
+            &.sm {
+                font-size: 14px;
+                line-height: 16px;
+            }
+        }
+    }
 }
 // 1380px
 @mixin hero-xxxlg-xxxxlg {
@@ -53,5 +94,58 @@
 @mixin hero-xxsm-xsm {
     .hero {
 
+    }
+}
+.sponsors {
+    padding: 120px 0;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-content {
+            width: calc(50% - 16px);
+            max-width: 636px;
+        }
+        &-col{
+            width: calc(50% - 16px);
+            max-width: 636px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        a {
+            font-size: 14px;
+            line-height: 16px;
+            color: #191919;
+            text-align: center;
+            svg {
+                width: 15px;
+                height: 15px;
+                fill: #00B67A;
+            }
+        }
+        h2 {
+            &::after {
+                display: none;
+            }
+        }
+    }
+    &Item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        max-width: 80px;
+        img {
+            width: 100%;
+        }
     }
 }

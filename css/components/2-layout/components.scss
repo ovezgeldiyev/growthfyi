@@ -1,8 +1,20 @@
 h1 {
   font-size: 48px;
   line-height: 58px;
+  color: $black2;
+  position: relative;
+  padding-bottom: 30px;
+  &:after {
+    content: "";
+    width: 30px;
+    height: 5px;
+    background: $primary;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
   span {
-    color: $main;
+    color: $primary;
   }
 }
 h2 {
@@ -50,8 +62,10 @@ p {
   }
 }
 .button {
+    cursor: pointer;
+    transition: .3s ease;
   &.primary {
-    background: $primary;
+    background-color: $primary;
     background-image: linear-gradient(140deg, #2072ff, #0451e5);
     border: 1px solid  $gray3;
     font-size: 16px;
@@ -61,6 +75,11 @@ p {
     span{
       font-size: 20px;
       line-height: 20px;
+    }
+    &:hover {
+        opacity: 1;
+        background: #161fdc;
+        background-image: none;
     }
   }
 }
@@ -93,6 +112,26 @@ p {
       color: $black2;
       border: 1px solid $primary;
       box-shadow: 0 0 0 0.125em rgb(4 81 229 / 25%);
+      margin-right: -1px;
     }
   }
+}
+.note {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($primary, .2);
+    border-radius: 100px;
+    padding: 4px 8px;
+    a {
+        font-size: 12px;
+        line-height: 14px;
+        color: $primary;
+        strong {
+            font-weight: 700;
+        }
+    }
+}
+main {
+    padding-top: 100px;
 }
