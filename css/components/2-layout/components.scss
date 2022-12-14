@@ -5,6 +5,7 @@ h1 {
   position: relative;
   padding-bottom: 30px;
   font-weight: 600;
+
   &:after {
     content: "";
     width: 30px;
@@ -14,17 +15,20 @@ h1 {
     bottom: 0;
     left: 0;
   }
+
   span {
     color: $primary;
   }
 }
+
 h2 {
   font-size: 40px;
   line-height: 50px;
   position: relative;
   padding-bottom: 15px;
   font-weight: 600;
-color: $black2;
+  color: $black2;
+
   &:after {
     content: "";
     width: 30px;
@@ -34,66 +38,75 @@ color: $black2;
     bottom: 0;
     left: 0;
   }
+
   span {
     color: $primary;
   }
 }
+
 h3 {
   font-size: 20px;
   line-height: 28px;
+
   span {
     color: $main;
   }
 }
+
 h4 {
   font-size: 22px;
 }
+
 h5 {
   font-size: 20px;
 }
+
 h6 {
   font-size: 18px;
 }
+
 p {
   &.big {
     font-size: 18px;
     line-height: 26px;
   }
+
   &.sm {
     font-size: 16px;
     line-height: 24px;
   }
 }
+
 .button {
-    cursor: pointer;
-    transition: .3s ease;
+  cursor: pointer;
+  transition: .3s ease;
+
   &.primary {
     background-color: $primary;
     background-image: linear-gradient(140deg, #2072ff, #0451e5);
-    border: 1px solid  $gray3;
+    border: 1px solid $gray3;
     font-size: 16px;
     line-height: 20px;
     color: $gray2;
     padding: 8px 20px;
     display: flex;
     align-items: center;
-    span{
+    justify-content: center;
+
+    span {
       font-size: 20px;
       line-height: 20px;
       margin-left: 5px;
     }
+
     &:hover {
-        opacity: 1;
-        background: #161fdc;
-        background-image: none;
+      opacity: 1;
+      background: #161fdc;
+      background-image: none;
     }
   }
 }
 
-// animation-name: pulse;
-// animation-duration: 4s;
-// animation-fill-mode: both;
-// animation-iteration-count: infinite;
 @keyframes pulse {
   0% {
     transform: translateY(0px) translate3d(0, 0px, 0);
@@ -102,6 +115,7 @@ p {
   50% {
     transform: translateY(-7.5px) translate3d(0, -7.5px, 0);
   }
+
   100% {
     transform: translateY(0px) translate3d(0, 0px, 0);
   }
@@ -111,33 +125,42 @@ p {
   &__text {
     display: flex;
     justify-content: center;
+
     input {
       font-size: 15px;
       line-height: 15px;
-      padding: 8px 30px 8px 11px;  
+      padding: 8px 30px 8px 11px;
       color: $black2;
       border: 1px solid $primary;
       box-shadow: 0 0 0 0.125em rgb(4 81 229 / 25%);
       margin-right: -1px;
+
+      &::placeholder {
+        color: rgba($black2, .5);
+      }
     }
   }
 }
+
 .note {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba($primary, .2);
-    border-radius: 100px;
-    padding: 4px 8px;
-    a {
-        font-size: 12px;
-        line-height: 14px;
-        color: $primary;
-        strong {
-            font-weight: 700;
-        }
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba($primary, .2);
+  border-radius: 100px;
+  padding: 4px 8px;
+
+  a {
+    font-size: 12px;
+    line-height: 14px;
+    color: $primary;
+
+    strong {
+      font-weight: 600;
     }
+  }
 }
+
 main {
-    padding-top: 100px;
+  padding-top: 100px;
 }

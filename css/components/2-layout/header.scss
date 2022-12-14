@@ -6,23 +6,27 @@
   z-index: 10;
   backdrop-filter: blur(10px);
   background-color: #fcfcfcd9;
-  &.sticky  {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   animation-name: sticky;
-   animation-duration: .4s;
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation-name: sticky;
+    animation-duration: .4s;
   }
+
   &__inner {
     padding: 12px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     &-logo {
       display: flex;
       justify-content: center;
       align-items: center;
+
       span {
         display: flex;
         justify-content: center;
@@ -30,42 +34,67 @@
         margin-right: 6px;
         width: 32px;
         height: 32px;
+
         img {
           width: 100%;
         }
       }
+
       strong {
         font-size: 16px;
         line-height: 18px;
         font-weight: 600;
         color: $black2;
       }
-   
+
     }
   }
 }
+
 // 1024px
 @mixin header-lg-xlg {
-    .header {
-      &__inner {
-        position: relative;
-        padding: 0;
-      }
-    }
-}
-// 540px
-@mixin header-xsm-sm {
-    .header {
-    
-    }
-}
-@keyframes sticky {
-    0% {
-      top: -60px;
-      opacity: 0;
-    }
-    100% {
-      top: 0;
-      opacity: 1;
+  .header {
+    &__inner {
+      position: relative;
+      padding: 0;
     }
   }
+}
+
+// 650px
+@mixin header-sm-md-extra {
+  .header {
+    .auto__container {
+      padding: 0;
+    }
+
+    &__inner {
+      &-logo {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+// 390px
+@mixin header-xxxsm-xxsm {
+  .header {
+    &__inner {
+      &-logo {
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+@keyframes sticky {
+  0% {
+    top: -60px;
+    opacity: 0;
+  }
+
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
