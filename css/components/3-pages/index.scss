@@ -38,6 +38,7 @@
             &.sm {
                 font-size: 14px;
                 line-height: 16px;
+                margin: 0;
             }
         }
     }
@@ -57,7 +58,23 @@
 // 1180px
 @mixin hero-xlg-xxlg {
     .hero {
-
+        &__inner {
+            h1 {
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+                &::after {
+                    height: 3px;
+                    width: 22px;
+                }
+            }
+            p {
+                margin-bottom: 16px;
+                &.sm {
+                    font-size: 12px;
+                    line-height: 14px;
+                }
+            }
+        }
     }
 }
 // 1024px
@@ -69,7 +86,12 @@
 // 930px
 @mixin hero-md-lg {
     .hero {
-  
+        &__inner {
+            flex-direction: column;
+            &-content {
+                
+            }
+        }
     }
 }
 // 750px

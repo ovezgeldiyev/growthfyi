@@ -92,6 +92,7 @@ h1 {
   color: #363636;
   position: relative;
   padding-bottom: 30px;
+  font-weight: 600;
 }
 h1:after {
   content: "";
@@ -111,6 +112,8 @@ h2 {
   line-height: 50px;
   position: relative;
   padding-bottom: 15px;
+  font-weight: 600;
+  color: #363636;
 }
 h2:after {
   content: "";
@@ -793,6 +796,7 @@ main {
 .hero__inner p.sm {
   font-size: 14px;
   line-height: 16px;
+  margin: 0;
 }
 
 .sponsors {
@@ -872,6 +876,11 @@ main {
 }
 
 @media (max-width: 1450px) {
+  h1 {
+    font-size: 44px;
+    line-height: 54px;
+  }
+
   h2 {
     font-size: 35px;
     line-height: 45px;
@@ -892,6 +901,11 @@ main {
   }
 }
 @media (max-width: 1250px) {
+  h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
   h2 {
     font-size: 33px;
     line-height: 40px;
@@ -931,9 +945,35 @@ main {
     padding: 0 30px;
   }
 
+  h1 {
+    font-size: 36px;
+    line-height: 46px;
+  }
+
   h2 {
     font-size: 29px;
     line-height: 37px;
+  }
+
+  p.big {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .hero__inner h1 {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  .hero__inner h1::after {
+    height: 3px;
+    width: 22px;
+  }
+  .hero__inner p {
+    margin-bottom: 16px;
+  }
+  .hero__inner p.sm {
+    font-size: 12px;
+    line-height: 14px;
   }
 
   .info__inner {
@@ -956,6 +996,15 @@ main {
 @media (max-width: 1024px) {
   ::-webkit-scrollbar {
     display: none;
+  }
+
+  h1 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  main {
+    padding-top: 70px;
   }
 
   body.active {
@@ -1126,6 +1175,17 @@ main {
   }
 }
 @media (max-width: 930px) {
+  h1 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .hero__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .info__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1245,6 +1305,22 @@ main {
     line-height: 37px;
   }
 
+  .hero__inner h1 {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  .hero__inner h1::after {
+    height: 3px;
+    width: 22px;
+  }
+  .hero__inner p {
+    margin-bottom: 16px;
+  }
+  .hero__inner p.sm {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
   .info__inner {
     padding: 30px 0;
   }
@@ -1283,6 +1359,12 @@ main {
   }
 }
 @media (max-width: 930px) {
+  .hero__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .info__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

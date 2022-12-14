@@ -4,6 +4,7 @@ h1 {
   color: $black2;
   position: relative;
   padding-bottom: 30px;
+  font-weight: 600;
   &:after {
     content: "";
     width: 30px;
@@ -22,6 +23,8 @@ h2 {
   line-height: 50px;
   position: relative;
   padding-bottom: 15px;
+  font-weight: 600;
+color: $black2;
   &:after {
     content: "";
     width: 30px;
