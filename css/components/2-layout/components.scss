@@ -76,7 +76,9 @@ p {
     line-height: 24px;
   }
 }
-
+main {
+  padding-top: 100px;
+}
 .button {
   cursor: pointer;
   transition: .3s ease;
@@ -104,20 +106,6 @@ p {
       background: #161fdc;
       background-image: none;
     }
-  }
-}
-
-@keyframes pulse {
-  0% {
-    transform: translateY(0px) translate3d(0, 0px, 0);
-  }
-
-  50% {
-    transform: translateY(-7.5px) translate3d(0, -7.5px, 0);
-  }
-
-  100% {
-    transform: translateY(0px) translate3d(0, 0px, 0);
   }
 }
 
@@ -154,13 +142,23 @@ p {
     font-size: 12px;
     line-height: 14px;
     color: $primary;
-
+    cursor: url("../images/new-tab.png") 8 8, pointer;
     strong {
       font-weight: 600;
     }
   }
 }
 
-main {
-  padding-top: 100px;
+@keyframes pulse {
+  0% {
+    transform: translateY(0px) translate3d(0, 0px, 0);
+  }
+
+  50% {
+    transform: translateY(-7.5px) translate3d(0, -7.5px, 0);
+  }
+
+  100% {
+    transform: translateY(0px) translate3d(0, 0px, 0);
+  }
 }

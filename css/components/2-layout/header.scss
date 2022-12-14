@@ -17,15 +17,21 @@
   }
 
   &__inner {
-    padding: 12px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     &-logo {
       display: flex;
       justify-content: center;
       align-items: center;
+
+      &:hover {
+        opacity: 1;
+
+        strong {
+          color: $primary;
+        }
+      }
 
       span {
         display: flex;
@@ -45,8 +51,8 @@
         line-height: 18px;
         font-weight: 600;
         color: $black2;
+        transition: .3s ease;
       }
-
     }
   }
 }
@@ -56,7 +62,6 @@
   .header {
     &__inner {
       position: relative;
-      padding: 0;
     }
   }
 }

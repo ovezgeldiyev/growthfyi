@@ -6,7 +6,7 @@
             position: absolute;
             top: 100%;
             left: 50%;
-            width: 120%;
+            min-width: 100%;
             max-height: 0;
             overflow: hidden;
             opacity: 0;
@@ -20,60 +20,78 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+
             a {
+                font-size: 14px;
+                line-height: 18px;
                 color: $main;
                 font-weight: 400;
                 transition: .3s ease;
                 background-color: transparent;
-                padding: 6px 16px;
+                padding: 6px 14px;
+
                 &:hover {
                     color: #0a0a0a;
                     background-color: #f5f5f5;
                 }
             }
         }
+
         li {
-            margin-right: 16px;
+            transition: .3s ease;
+
+            &:hover {
+                background-color: #fafafa;
+            }
+
             &.drop {
                 position: relative;
+                margin-right: 12px;
+
                 &:hover {
                     .nav__inner-dropdown {
                         max-height: 160px;
                         opacity: 1;
                     }
                 }
-                & > a {
-                    padding-right: 36px;
+
+                &>a {
+                    padding-right: 40px;
                     position: relative;
+
                     &::before {
                         position: absolute;
                         content: "";
                         top: 50%;
                         right: 15px;
-                        width: 9px;
-                        height: 9px;
+                        width: 9.5px;
+                        height: 9.5px;
                         border-top: 2.5px solid $primary;
                         border-right: 2.5px solid $primary;
                         background-color: transparent;
-                        transform: translateY(-50%) rotate(135deg);
+                        transform: translateY(-70%) rotate(135deg);
                     }
                 }
             }
 
-            & > a {
+            &>a {
                 color: $main;
                 font-weight: 400;
                 transition: .3s ease;
                 display: flex;
                 align-items: center;
-                padding: 8px;
+                padding: 8px 12px;
+                line-height: 40px;
+
                 &.active {
                     color: $primary;
                 }
+
                 &:hover {
                     color: $primary;
                     opacity: 1;
                 }
+
                 span {
                     color: $primary;
                     background-color: rgba($primary, 0.2);
@@ -83,25 +101,26 @@
                     padding: 6px 8px;
                     border-radius: 4px;
                     transition: .3s ease;
+
                     &:hover {
                         opacity: .8;
                     }
                 }
             }
         }
-    }
-    .burger {
-        display: none;
+
+        .button {
+            cursor: url("../images/new-tab.png") 8 8, pointer;
+        }
     }
 }
+
 .burger {
     display: none;
 }
+
 // 1024px
 @mixin nav-lg-xlg {
-    body.active {
-        overflow: hidden;
-    }
     .nav {
         position: absolute;
         top: 100%;
@@ -114,16 +133,19 @@
         background: $white2;
         transition: .4s ease;
         box-shadow: 0 8px 16px rgb(10 10 10 / 10%);
+
         &.active {
             max-height: 500px;
             opacity: 1;
         }
+
         &__inner {
             padding: 10px 0;
             flex-direction: column;
             justify-content: unset;
             align-items: flex-start;
             width: 100%;
+
             &-dropdown {
                 position: static;
                 max-height: unset;
@@ -134,26 +156,40 @@
                 transform: translate(0);
                 width: 100%;
                 align-items: flex-start;
+
                 a {
                     width: 100%;
+                    padding: 8px 24px;
+
                     &:hover {
-                        background-color: transparent;
                         color: $primary;
                     }
                 }
             }
+
             li {
                 margin: 0;
                 width: 100%;
-                & > a {
+                &:hover {
+                    background-color: transparent;
+                }
+                &>a {
                     padding: 8px 12px;
+                    line-height: 24px;
+                    &:hover {
+                        opacity: 1;
+                        color: $primary;
+                        background-color: #fafafa;
+                    }
                 }
             }
+
             .button {
                 margin: 6px 12px;
             }
         }
     }
+
     .burger {
         display: block;
         cursor: pointer;
@@ -162,11 +198,13 @@
         width: 52px;
         height: 52px;
         transition: .3s ease;
+
         &:hover {
             background-color: rgba(0, 0, 0, .05);
         }
+
         &::before {
-            top: 36%;
+            top: 38%;
             width: 16px;
             height: 1px;
             background-color: $black;
@@ -176,6 +214,7 @@
             left: 50%;
             @include transformX;
         }
+
         span {
             top: 50%;
             width: 16px;
@@ -187,8 +226,9 @@
             @include transform;
             @include transition;
         }
+
         &::after {
-            bottom: 36%;
+            bottom: 38%;
             width: 16px;
             height: 1px;
             background-color: $black;
@@ -198,23 +238,25 @@
             left: 50%;
             @include transformX;
         }
+
         &.active {
             &::before {
-                transform: translate(-50%, 12px);
+                transform: translate(-50%, 10px);
             }
+
             span {
                 opacity: 0;
             }
+
             &::after {
-                transform: translate(-50%, -12px);
+                transform: translate(-50%, -10px);
 
             }
         }
     }
 }
+
 // 540px
 @mixin nav-xsm-sm {
-    .nav {
-    
-    }
+    .nav {}
 }

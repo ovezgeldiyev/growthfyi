@@ -110,6 +110,7 @@
 
     @include nav-lg-xlg;
     @include header-lg-xlg;
+    @include hero-lg-xlg;
     @include sponsors-lg-xlg;
     @include service-lg-xlg;
     @include footer-lg-xlg;
@@ -160,18 +161,6 @@
 
 // 440px
 @include xxsm-xsm {
-    h1 {
-        font-size: 24px;
-        line-height: 30px;
-    }
-    h2 {
-        font-size: 22px;
-        line-height: 28px;
-        padding-bottom: 12px;
-        &::after {
-            width: 18px;
-        }
-    }
     main {
         padding-top: 70px;
     }
